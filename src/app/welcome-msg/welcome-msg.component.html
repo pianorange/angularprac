@@ -1,0 +1,17 @@
+
+
+<h4>
+  <span>{{welcomeMsg}}</span>
+  <span *ngIf="welcomeMsg ===''">{{userName}}</span>님 환영합니다.
+  <span>{{userPassword}}</span>가 설정되었습니다.
+</h4>
+
+<div class="contents">
+  <label for="user-name"> </label>
+
+  <input type="text" name="user-nmae" id="user-name"
+         [(ngModel)]="userName"  (ngModelChange)="onChange()">
+
+  <button type="button" (click)="showWelcomeMsg()" >입력</button>
+</div>
+
